@@ -20,7 +20,7 @@ CREATE TABLE CarsData
     Cylinders int
     Edispl int,
     Horsepower int,
-    Weight int,
+    Wgt int,
     Accelerate float,
     Yr int
 );
