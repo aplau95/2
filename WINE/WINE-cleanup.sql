@@ -1,0 +1,3 @@
+DROP TABLE Appelations;
+DROP TABLE Grapes;
+DROP TABLE Wine;
