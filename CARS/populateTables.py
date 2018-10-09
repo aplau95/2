@@ -2,10 +2,10 @@ import csv
 import mysql.connector
 
 connection = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="",
-    database="CARS.db"
+    host="ambari-head.csc.calpoly.edu",
+    user="alau23",
+    passwd="6184431",
+    database="alau23"
 )
 
 with open ('test.csv', 'r') as f:
