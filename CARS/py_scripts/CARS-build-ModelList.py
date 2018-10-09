@@ -8,7 +8,7 @@ connection = mysql.connector.connect(
     database="alau23"
 )
 
-with open ('csv_files/model-list.csv', 'r') as f:
+with open ('../csv_files/model-list.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
     query = 'INSERT INTO ModelList VALUES({0})'

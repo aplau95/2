@@ -8,7 +8,7 @@ connection = mysql.connector.connect(
     database="alau23"
 )
 
-with open ('csv_files/continents.csv', 'r') as f:
+with open ('../csv_files/continents.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
     query = 'INSERT INTO Continent VALUES({0})'
