@@ -9,7 +9,10 @@ CREATE TABLE CarMakers
 );
 
 
+
 LOAD DATA INFILE 'car-makers.csv' INTO TABLE CarMakers
 FIELDS TERMINATED BY '\n' 
 ENCLOSED BY ','
 IGNORE 1 LINES; 
+
+select * from CarMakers;
