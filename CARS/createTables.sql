@@ -17,12 +17,12 @@ CREATE TABLE CarsData
 (
     ID int,
     MPG int,
-    Cylinders int
+    Cylinders int,
     Edispl int,
     Horsepower int,
-    Wgt int,
+    Weight int,
     Accelerate float,
-    Yr int
+    Year int
 );
 
 CREATE TABLE Continent
