@@ -1,0 +1,7 @@
+LOAD DATA INFILE 'car-makers.csv' INTO TABLE CarMakers
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES; 
+
+select * from CarMakers;
