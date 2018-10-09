@@ -1,5 +1,5 @@
+import csv 
 import mysql.connector
-import csv
 
 connection = mysql.connector.connect(
     host="ambari-head.csc.calpoly.edu",
@@ -8,14 +8,13 @@ connection = mysql.connector.connect(
     database="alau23"
 )
 
-with open ('test.csv', 'r') as f:
+with open ('car-makers.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    data = next(reader)
-    query = 'INSERT INTO CarMakers VALUES({0})'
-    query = query.format(', '.join(['%s'] * len(data)))
+    query = 'insert into CarMakers values ({0})'
+    query = query.format(','.join('?' * len(data)))
     cursor = connection.cursor()
+    cursor.execute(query, data)
     for data in reader:
-        cursor.execute(query % tuple(data))
-    connection.commit()
-    
+        cursor.execute(query, data)
+    cursor.commit()
