@@ -22,7 +22,7 @@ CREATE TABLE CarsData
     Horsepower int,
     Weight int,
     Accelerate float,
-    Year int
+    Yr int
 );
 
 CREATE TABLE Continent
