@@ -20,7 +20,7 @@ CREATE TABLE Flights(
     FlightNo INT,
     SourceAirport VARCHAR(3),
     DestAirport VARCHAR(3),
-    PRIMARY KEY (Airline, FightNo),
+    PRIMARY KEY (Airline, FlightNo),
     FOREIGN KEY (SourceAirport) REFERENCES Airports(AirportCode),
     FOREIGN KEY (DestAirport) REFERENCES Airports(AirportCode)
 );

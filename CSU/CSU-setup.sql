@@ -30,8 +30,7 @@ CREATE TABLE Disciplines(
 CREATE TABLE Enrollments(
 	Campus INT,
 	Year INT,
-	Total INT,
-	Enrollment_AY INT,
+	TotalEnrollment_AY INT,
 	FTE_AY INT,
 	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );

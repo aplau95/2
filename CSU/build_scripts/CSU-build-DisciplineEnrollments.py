@@ -15,5 +15,5 @@ with open ('../csv_files/discipline-enrollments.csv', 'r') as f:
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for data in reader:
-        cursor.execute(query % tuple(data))
+        print (format(query % tuple(data)))
     connection.commit()
