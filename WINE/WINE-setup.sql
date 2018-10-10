@@ -19,13 +19,15 @@ CREATE TABLE Wine (
     Grape VARCHAR(255),
     Winery VARCHAR(255),
     Appellation VARCHAR(255),
+    State VARCHAR(255),
     Name VARCHAR(255),
-    Year INT,
+    Year INT, 
     Price INT,
     Score INT,
     Cases INT,
     Drink VARCHAR(255),
     PRIMARY KEY (No),
     FOREIGN KEY (Grape) REFERENCES Grapes(Grape),
-    FOREIGN KEY (Appellation) REFERENCES Appellations(Appellation)
+    FOREIGN KEY (Appellation) REFERENCES Appellations(Appellation),
+    FOREIGN KEY (State) REFERENCES Appellations(State)
 );

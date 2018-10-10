@@ -12,9 +12,8 @@ with open ('../csv_files/wine.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
     query = 'INSERT INTO Wine VALUES({0})'
-    query = query.format(', '.join(['%s'] * (len(data)-1)))
+    query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for data in reader:
-        del data[4]
         cursor.execute(query % tuple(data))
     connection.commit()
