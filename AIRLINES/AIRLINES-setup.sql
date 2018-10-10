@@ -5,7 +5,7 @@ Abbreviation VARCHAR(255),
 Country VARCHAR(255)
 );
 
-CREATE TABLE Airport(
+CREATE TABLE Airports(
 City VARCHAR(255),
 AirportCode CHAR(3),
 AirportName VARCHAR(255),
