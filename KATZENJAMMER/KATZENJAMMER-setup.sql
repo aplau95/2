@@ -1,3 +1,4 @@
+
 CREATE TABLE Albums (
 AId INT PRIMARY KEY,
 Title VARCHAR(255),

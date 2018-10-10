@@ -1,4 +1,4 @@
-CREATE TABLE Appelations (
+CREATE TABLE Appellations (
 No INT,
 Appelation VARCHAR(255),
 County VARCHAR(255),
