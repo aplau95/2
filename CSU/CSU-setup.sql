@@ -50,5 +50,5 @@ CREATE TABLE Faculty(
 	Campus INT,
 	Year INT,
 	Faculty DECIMAL(5,1),
-	FOREIGN KEY Campus REFERENCES Campuses(Id)
+	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );
