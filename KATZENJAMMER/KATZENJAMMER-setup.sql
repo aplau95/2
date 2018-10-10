@@ -1,5 +1,5 @@
 CREATE TABLE Albums (
-AId INT,
+AId INT PRIMARY KEY,
 Title VARCHAR(255),
 Year INT,
 Label VARCHAR(255),
@@ -7,7 +7,7 @@ Type VARCHAR(255)
 );
 
 CREATE TABLE Band (
-Id INT,
+Id INT PRIMARY KEY,
 Firstname VARCHAR(255),
 Lastname VARCHAR(255)
 );
@@ -15,28 +15,35 @@ Lastname VARCHAR(255)
 CREATE TABLE Instruments (
 SongId INT,
 BandmateId INT,
-Instrument VARCHAR(255)
+Instrument VARCHAR(255),
+FOREIGN KEY SongId REFERENCES Songs(SongId),
+FOREIGN KEY BandmateId REFERENCES Band(Id)
 );
 
 CREATE TABLE Performance (
 SongId INT,
 Bandmate INT,
-StatePosition VARCHAR(255)
+StatePosition VARCHAR(255),
+FOREIGN KEY SongId REFERENCES Songs(SongId),
+FOREIGN KEY BandmateId REFERENCES Band(Id)
 );
 
 CREATE TABLE Songs (
-SongId INT,
+SongId INT PRIMARY KEY,
 Title VARCHAR(255),
 );
 
 CREATE TABLE Tracklists (
 AlbumId INT,
 Position INT,
-SongId INT
+SongId INT,
+FOREIGN KEY AlbumId REFERENCES Albums(AId)
 );
 
 CREATE TABLE Vocals (
 SongId INT,
 Bandmate INT,
-Type VARCHAR(255)
+Type VARCHAR(255),
+FOREIGN KEY SongId REFERENCES Songs(SongId),
+FOREIGN KEY Bandmate REFERENCES Band(Id)
 );

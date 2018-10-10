@@ -2,20 +2,23 @@ CREATE TABLE Campuses(
 	Id INT,
 	Campus VARCHAR(255),
 	Location VARCHAR(255),
-	County, VARCHAR(255),
-	Year, INT
+	County VARCHAR(255),
+	Year INT,
+	PRIMARY KEY Id
 );
 
 CREATE TABLE Fees(
 	Campus INT,
 	Year INT,
-	Fee INT
+	Fee INT,
+	FOREIGN KEY Campus REFERENCES Campuses(Id)
 );
 
 CREATE TABLE Degree(
 	Year INT,
-	CAMPUS INT,
-	DEGREES INT
+	Campus INT,
+	Degrees INT,
+	FOREIGN KEY Campus REFERENCES Campuses(Id)
 );
 
 CREATE TABLE DisciplineEnrollments(
@@ -23,7 +26,9 @@ CREATE TABLE DisciplineEnrollments(
 	Discipline INT,
 	Year INT,
 	Undergraduate INT,
-	Graduate INT	
+	Graduate INT,
+	FOREIGN KEY Campus REFERENCES Campuses(Id)
+	FOREIGN KEY Discipline REFERENCES Discipline(Id)
 )
 
 CREATE TABLE Discipline(
@@ -36,11 +41,13 @@ CREATE TABLE Enrollments(
 	Year INT,
 	Total INT,
 	Enrollment_AY INT,
-	FTE_AY INT
+	FTE_AY INT,
+	FOREIGN KEY Campus REFERENCES Campuses(Id)
 );
 
 CREATE TABLE Faculty(
 	Campus INT,
 	Year INT,
-	Faculty FLOAT
+	Faculty DECIMAL(5,1),
+	FOREIGN KEY Campus REFERENCES Campuses(Id)
 );
