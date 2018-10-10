@@ -1,6 +1,6 @@
-CREATE TABLE Appelations (
+CREATE TABLE Appellations (
 No INT,
-Appelation VARCHAR(255),
+Appellation VARCHAR(255),
 County VARCHAR(255),
 State VARCHAR(255),
 Area VARCHAR(255),
@@ -14,10 +14,10 @@ Color VARCHAR(255)
 );
 
 CREATE TABLE Wine (
-No Int PRIMARY KEY,
+No Int,
 Grape VARCHAR(255),
 Winery VARCHAR(255),
-Appelation VARCHAR(255),
+Appellation VARCHAR(255),
 State VARCHAR(255),
 Name VARCHAR(255),
 Year INT,
@@ -25,5 +25,7 @@ Price INT,
 Score INT,
 CASES INT,
 Drink VARCHAR(255),
-FOREIGN KEY Grape REFERENCES Grapes(Grape)
+PRIMARY KEY (No),
+FOREIGN KEY (Grape) REFERENCES Grapes(Grape),
+FOREIGN KEY (Appellation) REFERENCES Appellations(Appellation)
 );
