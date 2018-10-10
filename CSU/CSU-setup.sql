@@ -4,7 +4,7 @@ CREATE TABLE Campuses(
 	Location VARCHAR(255),
 	County VARCHAR(255),
 	Year INT,
-	PRIMARY KEY Id
+	PRIMARY KEY (Id)
 );
 
 CREATE TABLE Fees(
@@ -27,13 +27,14 @@ CREATE TABLE DisciplineEnrollments(
 	Year INT,
 	Undergraduate INT,
 	Graduate INT,
-	FOREIGN KEY Campus REFERENCES Campuses(Id)
+	FOREIGN KEY Campus REFERENCES Campuses(Id),
 	FOREIGN KEY Discipline REFERENCES Discipline(Id)
 )
 
 CREATE TABLE Discipline(
-	Id INT PRIMARY KEY,
-	Name VARCHAR(255)
+	Id INT,
+	Name VARCHAR(255),
+	PRIMARY KEY (Id)
 );
 
 CREATE TABLE Enrollments(
