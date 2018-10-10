@@ -21,16 +21,6 @@ CREATE TABLE Degree(
 	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );
 
-CREATE TABLE DisciplineEnrollments(
-	Campus INT,
-	Discipline INT,
-	Year INT,
-	Undergraduate INT,
-	Graduate INT,
-	FOREIGN KEY (Campus) REFERENCES Campuses(Id),
-	FOREIGN KEY (Discipline) REFERENCES Disciplines(Id)
-)
-
 CREATE TABLE Disciplines(
 	Id INT,
 	Name VARCHAR(255),
@@ -52,3 +42,13 @@ CREATE TABLE Faculty(
 	Faculty DECIMAL(5,1),
 	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );
+
+CREATE TABLE DisciplineEnrollments(
+	Campus INT,
+	Discipline INT,
+	Year INT,
+	Undergraduate INT,
+	Graduate INT,
+	FOREIGN KEY (Campus) REFERENCES Campuses(Id),
+	FOREIGN KEY (Discipline) REFERENCES Disciplines(Id)
+)
