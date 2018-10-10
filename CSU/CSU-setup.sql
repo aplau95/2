@@ -28,10 +28,10 @@ CREATE TABLE DisciplineEnrollments(
 	Undergraduate INT,
 	Graduate INT,
 	FOREIGN KEY (Campus) REFERENCES Campuses(Id),
-	FOREIGN KEY (Discipline) REFERENCES Discipline(Id)
+	FOREIGN KEY (Discipline) REFERENCES Disciplines(Id)
 )
 
-CREATE TABLE Discipline(
+CREATE TABLE Disciplines(
 	Id INT,
 	Name VARCHAR(255),
 	PRIMARY KEY (Id)
