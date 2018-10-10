@@ -6,11 +6,19 @@ PRIMARY KEY (Id)
 );
 
 CREATE TABLE Goods (
-Id VARCHAR(255) NOT NULL,
+Id VARCHAR(255),
 Flavor VARCHAR(255),
 Food VARCHAR(255),
 Price DECIMAL(5,2),
 PRIMARY KEY (Id)
+);
+
+CREATE TABLE Receipts (
+ReceiptNumber INT,
+Dte DATE,
+CustomerId INT,
+PRIMARY KEY (ReceiptNumber),
+FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
 );
 
 CREATE TABLE Items (
@@ -19,12 +27,4 @@ Ordinal INT,
 Item VARCHAR(255),
 FOREIGN KEY (Receipt) REFERENCES Receipts(ReceiptNumber),
 FOREIGN KEY (Item) REFERENCES Goods(Id)
-);
-
-CREATE TABLE Receipts (
-ReceiptNumber INT NOT NULL,
-_Date DATE,
-CustomerId INT,
-PRIMARY KEY (ReceiptNumber),
-FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
 );

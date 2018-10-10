@@ -11,10 +11,11 @@ connection = mysql.connector.connect(
 with open ('../csv_files/degrees.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    data = next(reader)
     query = 'INSERT INTO Degree VALUES({0})'
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
+    print data
+    print query
     for data in reader:
-        cursor.execute(query % tuple(data))
+        print (format(query % tuple(data)))
     connection.commit()

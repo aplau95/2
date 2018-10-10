@@ -1,6 +1,8 @@
 CREATE TABLE Marathon (
     Place INT,
     Duration TIME,
+    Pace TIME,
+    GroupPlace VARCHAR(255),
     Grp VARCHAR(255),
     Age INT,
     Sex VARCHAR(1),

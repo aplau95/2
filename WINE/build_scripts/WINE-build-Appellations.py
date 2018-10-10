@@ -12,8 +12,9 @@ with open ('../csv_files/appellations.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
     query = 'INSERT INTO Appellations VALUES({0})'
-    query = query.format(', '.join(['%s'] * len(data)))
+    query = query.format(', '.join(['%s'] * (len(data) -1 )))
     cursor = connection.cursor()
     for data in reader:
-        cursor.execute(query % tuple(data))
+        del data[3]
+        print (format(query % tuple(data)))
     connection.commit()
