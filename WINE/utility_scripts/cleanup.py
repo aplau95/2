@@ -22,5 +22,5 @@ def executeScript(filename):
         except IOError, msg:
             print "Command skipped: ", msg
 
-executeScript('../STUDENTS-cleanup.sql')
+executeScript('../WINE-cleanup.sql')
 connection.commit()
