@@ -17,7 +17,7 @@ CREATE TABLE Items (
 Receipt INT,
 Ordinal INT,
 Item VARCHAR(255),
-FOREIGN KEY (Receipt) REFERENCES Rceipts(ReceiptNumber),
+FOREIGN KEY (Receipt) REFERENCES Receipts(ReceiptNumber),
 FOREIGN KEY (Item) REFERENCES Goods(Id)
 );
 
