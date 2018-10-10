@@ -8,11 +8,10 @@ connection = mysql.connector.connect(
     database="alau23"
 )
 
-with open ('../csv_files/car-data.csv', 'r') as f:
+with open ('../csv_files/Campuses.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    data = next(reader)
-    query = 'INSERT INTO CarData VALUES({0})'
+    query = 'INSERT INTO Campuses VALUES({0})'
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for data in reader:

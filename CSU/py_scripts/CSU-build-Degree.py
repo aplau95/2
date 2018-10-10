@@ -8,10 +8,11 @@ connection = mysql.connector.connect(
     database="alau23"
 )
 
-with open ('../csv_files/model-list.csv', 'r') as f:
+with open ('../csv_files/degrees.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    query = 'INSERT INTO ModelList VALUES({0})'
+    data = next(reader)
+    query = 'INSERT INTO Degree VALUES({0})'
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for data in reader:
