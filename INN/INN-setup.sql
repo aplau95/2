@@ -18,5 +18,5 @@ LastName VARCHAR(255),
 FirstName VARCHAR(255),
 Adults INT,
 Kids INT,
-FOREIGN KEY RoomId REFERENCES Rooms(RoomId)
+FOREIGN KEY (RoomId) REFERENCES Rooms(RoomId)
 );
