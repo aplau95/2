@@ -11,14 +11,14 @@ CREATE TABLE Fees(
 	Campus INT,
 	Year INT,
 	Fee INT,
-	FOREIGN KEY Campus REFERENCES Campuses(Id)
+	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );
 
 CREATE TABLE Degree(
 	Year INT,
 	Campus INT,
 	Degrees INT,
-	FOREIGN KEY Campus REFERENCES Campuses(Id)
+	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );
 
 CREATE TABLE DisciplineEnrollments(
@@ -27,8 +27,8 @@ CREATE TABLE DisciplineEnrollments(
 	Year INT,
 	Undergraduate INT,
 	Graduate INT,
-	FOREIGN KEY Campus REFERENCES Campuses(Id),
-	FOREIGN KEY Discipline REFERENCES Discipline(Id)
+	FOREIGN KEY (Campus) REFERENCES Campuses(Id),
+	FOREIGN KEY (Discipline) REFERENCES Discipline(Id)
 )
 
 CREATE TABLE Discipline(
@@ -43,7 +43,7 @@ CREATE TABLE Enrollments(
 	Total INT,
 	Enrollment_AY INT,
 	FTE_AY INT,
-	FOREIGN KEY Campus REFERENCES Campuses(Id)
+	FOREIGN KEY (Campus) REFERENCES Campuses(Id)
 );
 
 CREATE TABLE Faculty(
