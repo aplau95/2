@@ -8,13 +8,13 @@ isAVA VARCHAR(255)
 );
 
 CREATE TABLE Grapes (
-ID INT,
+ID INT PRIMARY KEY,
 Grape VARCHAR(255),
 Color VARCHAR(255)
 );
 
 CREATE TABLE Wine (
-No Int,
+No Int PRIMARY KEY,
 Grape VARCHAR(255),
 Winery VARCHAR(255),
 Appelation VARCHAR(255),
@@ -24,5 +24,6 @@ Year INT,
 Price INT,
 Score INT,
 CASES INT,
-Drink VARCHAR(255)
+Drink VARCHAR(255),
+FOREIGN KEY Grape REFERENCES Grapes(Grape)
 );
