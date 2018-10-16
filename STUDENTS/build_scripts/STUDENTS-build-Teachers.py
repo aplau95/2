@@ -11,9 +11,9 @@ connection = mysql.connector.connect(
 with open ('../csv_files/teachers.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    query = 'INSERT INTO Teachers VALUES({0})'
+    query = 'INSERT INTO Teachers VALUES({0});'
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for data in reader:
-        print (format(query % tuple(data)))
+        cursor.execute(format(query % tuple(data)))
     connection.commit()
