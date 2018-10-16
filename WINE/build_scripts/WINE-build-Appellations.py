@@ -16,5 +16,5 @@ with open ('../csv_files/appellations.csv', 'r') as f:
     cursor = connection.cursor()
     for data in reader:
         del data[3]
-        print (format(query % tuple(data)))
+        cursor.execute(format(query % tuple(data)))
     connection.commit()
