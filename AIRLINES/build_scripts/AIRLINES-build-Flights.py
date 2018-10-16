@@ -11,7 +11,7 @@ connection = mysql.connector.connect(
 with open ('../csv_files/flights.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    query = 'INSERT INTO Flights VALUES({0})'
+    query = 'INSERT INTO Flights VALUES({0});'
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for data in reader:
