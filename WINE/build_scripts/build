@@ -1,3 +1,5 @@
 #!/bin/bash
 
-for f in *.py; do python "$f"; done
+python "WINE-build-Grapes.py";
+python "WINE-build-Appellations.py"; 
+python "WINE-build-Wine.py";
