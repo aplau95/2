@@ -1,3 +1,1 @@
-DROP TABLE Wine;
-DROP TABLE Appellations;
-DROP TABLE Grapes;
+ALTER TABLE Wine DROP COLUMN Appellation;
