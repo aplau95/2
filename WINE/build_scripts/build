@@ -1,5 +1,0 @@
-#!/bin/bash
-
-python "WINE-build-Grapes.py";
-python "WINE-build-Appellations.py"; 
-python "WINE-build-Wine.py";

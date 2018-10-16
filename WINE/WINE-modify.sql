@@ -1,7 +1,0 @@
-ALTER TABLE Wine DROP FOREIGN KEY Wine_ibfk_2;
-ALTER TABLE Wine DROP COLUMN Appellation;
-DELETE FROM Wine WHERE Grape != 'Syrah' OR Score <= 93;
-ALTER TABLE Wine MODIFY Winery VARCHAR(15);
-ALTER TABLE Wine ADD COLUMN REVENUE Int;
-UPDATE Wine SET Revenue = Cases * Price * 12;
-SELECT * FROM Wine ORDER BY Revenue;
