@@ -7,7 +7,7 @@ Build instructions in order
 3. source STUDENTS-build-Students.sql
 
 
-Modify Program
+Modify Program (Modifies Students Table)
 1. source STUDENTS-modify.sql
 
 Cleanup
