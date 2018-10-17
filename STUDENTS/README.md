@@ -3,8 +3,8 @@ alau23@calpoly.edu
 
 Build instructions in order
 1. source STUDENTS-setup.sql
-2. source STUDENTS-Teachers.sql
-3. source STUDENTS-Students.sql
+2. source STUDENTS-build-Teachers.sql
+3. source STUDENTS-build-Students.sql
 
 
 Modify Program
