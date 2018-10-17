@@ -1,5 +1,6 @@
-Andrew Lau
+Andrew Lau and Ryan Kirkpatrick
 alau23@calpoly.edu
+rjkirkpa@calpoly.edu
 
 Build instructions in order
 1. source STUDENTS-setup.sql
