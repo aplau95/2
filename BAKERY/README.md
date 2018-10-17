@@ -8,7 +8,7 @@ Build instructions in order
 4. source BAKERY-build-Receipts.sql
 5. source BAKERY-build-Items.sql
 
-Modify Program (modifies Goods)
+Modify Program (modifies Goods Table)
 1. source BAKERY-modify.sql
 
 Cleanup
