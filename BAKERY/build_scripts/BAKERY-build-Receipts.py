@@ -12,7 +12,7 @@ connection = mysql.connector.connect(
 with open ('../csv_files/receipts.csv', 'r') as f:
     reader = csv.reader(f)
     data = next(reader) 
-    query = 'INSERT INTO Receipts VALUES({0})'
+    query = 'INSERT INTO Receipts VALUES({0});'
     query = query.format(', '.join(['%s'] * len(data)))
     cursor = connection.cursor()
     for counter, data in enumerate(reader):
